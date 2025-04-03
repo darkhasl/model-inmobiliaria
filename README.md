@@ -1,10 +1,9 @@
-# Credit Project
-==============================
-
 # Proyecto de Predicción de Precios de Inmuebles
 
 ## Descripción
 Este proyecto implementa un modelo de machine learning para predecir precios de inmuebles basado en características como área, habitaciones, ubicación, etc.
+
+## Estructura del Proyecto
 
 Project Organization
 ------------
@@ -41,3 +40,5 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+La plantilla esta basada en la version 1, actualmente existe la version 2 pero para la practica se opto por usar la versión 1, para mayor información ingresar a la pagina oficial de cookiecutter

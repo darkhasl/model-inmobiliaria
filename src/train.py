@@ -1,4 +1,4 @@
-# Código de Entrenamiento - Modelo de Riesgo de Default en un Banco de Corea
+# Código de Entrenamiento
 ############################################################################
 
 

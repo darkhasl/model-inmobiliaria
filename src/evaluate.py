@@ -1,4 +1,4 @@
-# Código de Evaluación - Modelo de Riesgo de Default en un Banco de Corea
+# Código de Evaluación - 
 ############################################################################
 
 import pandas as pd

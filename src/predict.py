@@ -1,4 +1,4 @@
-# Código de Scoring - Modelo de Riesgo de Default en un Banco de Corea
+# Código de Scoring
 ############################################################################
 
 import pandas as pd

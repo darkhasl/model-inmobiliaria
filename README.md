@@ -1,9 +1,10 @@
 # Credit Project
 ==============================
 
-Credit Default Prediction Project
+# Proyecto de Predicción de Precios de Inmuebles
 
-To see the data dictionary, you could visit: https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset
+## Descripción
+Este proyecto implementa un modelo de machine learning para predecir precios de inmuebles basado en características como área, habitaciones, ubicación, etc.
 
 Project Organization
 ------------

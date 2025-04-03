@@ -1,0 +1,39 @@
+# Datos (no versionados por tamaño o sensibilidad)
+data/processed/
+data/scores/
+data/external/
+
+# Modelos entrenados
+models/
+
+# Entornos virtuales y entornos Python
+venv/
+.env
+.venv/
+env/
+
+# Jupyter y notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Logs y caché
+*.log
+.pytest_cache/
+__pycache__/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de paquetes
+*.egg-info/
+dist/
+build/

@@ -1,6 +1,5 @@
 # Datos (no versionados por tamaño o sensibilidad)
 data/processed/
-data/scores/
 data/external/
 
 # Modelos entrenados

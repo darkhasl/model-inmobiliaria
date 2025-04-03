@@ -1,24 +1,22 @@
-# Código de Scoring
+# Código de Scoring -
 ############################################################################
 
 import pandas as pd
 import joblib
 
 def predict(new_data):
-    # Cargar modelo y preprocesador
+    # Cargar componentes
     model = joblib.load('../models/model.joblib')
     preprocessor = joblib.load('../models/preprocessor.joblib')
     
-    # Procesar nuevos datos
-    processed_data = preprocessor.transform(new_data)
+    # Transformar manteniendo la estructura original
+    processed_df = preprocessor.transform(new_data)  # Ya es DataFrame con nombres
     
-    # Hacer predicción
-    prediction = model.predict(processed_data)
-    
-    return prediction
+    # Asegurar orden de columnas
+    ordered_columns = preprocessor.get_feature_names_out()
+    return model.predict(processed_df[ordered_columns])
 
 if __name__ == '__main__':
-    # Ejemplo de uso
     sample_data = pd.DataFrame({
         'area_m2': [85],
         'habitaciones': [3],

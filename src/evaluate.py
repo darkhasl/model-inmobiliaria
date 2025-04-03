@@ -1,4 +1,4 @@
-# Código de Evaluación - 
+# Código de Evaluación
 ############################################################################
 
 import pandas as pd

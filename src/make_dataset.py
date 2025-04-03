@@ -20,13 +20,23 @@ def prepare_data():
     numeric_features = ['area_m2', 'habitaciones', 'banos', 'antiguedad']
     categorical_features = ['ubicacion']
     binary_features = ['piscina', 'garaje']
-    
+    '''
     preprocessor = ColumnTransformer(
         transformers=[
             ('num', StandardScaler(), numeric_features),
             ('cat', OneHotEncoder(), categorical_features),
             ('binary', 'passthrough', binary_features)
         ])
+    '''
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', StandardScaler(), numeric_features),
+            ('cat', OneHotEncoder(sparse_output=False), categorical_features),
+            ('binary', 'passthrough', binary_features)
+        ],
+        verbose_feature_names_out=False
+    ).set_output(transform="pandas")  # Mantener como DataFrame
+   
     
     # Dividir datos
     X_train, X_test, y_train, y_test = train_test_split(

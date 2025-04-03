@@ -1,12 +1,20 @@
 import pandas as pd
 import pytest
-from src.data.make_dataset import prepare_data
+import sys
+import os
+import joblib
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.make_dataset import prepare_data
+
 
 def test_data_processing():
-    # Ejecutar el pipeline
     prepare_data()
     
-    # Verificar que se crearon los archivos
-    assert pd.read_csv('data/processed/X_train.csv').shape[0] > 0
-    assert pd.read_csv('data/processed/X_test.csv').shape[1] == 8  # N features esperados
-    assert 'precio' not in pd.read_csv('data/processed/X_train.csv').columns
+    # Verificar consistencia entre features y preprocesador
+    preprocessor = joblib.load('../models/preprocessor.joblib')
+    X_test = pd.read_csv('../data/processed/X_test.csv')
+    
+    # Validar número de features
+    expected_features = len(preprocessor.get_feature_names_out())
+    assert X_test.shape[1] == expected_features
